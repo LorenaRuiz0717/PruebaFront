@@ -2,6 +2,7 @@
 
 
 const addShop=()=>{
+    
 console.log ('añadiendo al carro')
 }
 

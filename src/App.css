@@ -1,19 +1,19 @@
-.navbar navbar-light{
-  background-color:black;
+.navbar{
+  background-color: none;
 }
 
-.busqueda{
+.busqueda {
   background-color: blue;
 }
 
-.contenedorNav{
-  background-color:#25c16a;
+.contenedorNav {
+  background-color: #25c16a;
   display: flex;
   justify-content: space-between;
   font-size: 10px;
 }
 
- /* h3{
+/* h3{
   font-size: 15px;
   text-align: center;
 }
@@ -21,25 +21,37 @@ h4{
   font-size: 10px;
   text-align: center;
 }  */
-.buscador{
+.buscador {
   display: flex;
   border-radius: 20%;
 }
-.product{
-  background-color:#d6d6d6;
+
+.contenCarusel{
   display: block;
-  margin: 2em ;
-  box-shadow: 0.2em 0.3em 0.3em rgb(0, 0, 0);
-  /* border: 0.1em solid #d6d6d6; */
-  border-radius: 1em;
-  justify-self: center;
-  width: 15em;
-  align-content: center ;
+}
+.contentProduct {
+  display:inline-flex; 
 }
 
-.title{
-  background-color:#25c16a ;
-  color:white;
+.product {
+  background-color: #d6d6d6;
+  display: block;
+  margin: 2em;
+  box-shadow: 0.2em 0.3em 0.3em rgb(0, 0, 0);
+  border: 0.1em solid #d6d6d6;
+  border-radius: 1em;
+  /* justify-self: center; */
+  width: 15em;
+  /* align-content: center; */
+  transition: all .4s ease-in-out;
+  z-index: 1;
+  /* padding: auto; */
+  
+}
+
+.title {
+  background-color: #25c16a;
+  color: white;
   text-align: center;
   border-radius: 0.5em 0.5em 0 0;
   font-size: 1em;
@@ -49,52 +61,54 @@ h4{
   padding: 1em;
 }
 
-.ficha{
-  display:inline-flex;
-  /* padding: 1em; */
-  /* margin: 72px ; */
-  box-shadow: 0.2em 0.3em 0.3em rgb(0, 0, 0);
-  border: 0.1em solid #d6d6d6;
-  border-radius: 1em;
-  /* flex-wrap: wrap; */
-  /* width: 100%; */
-
-}
-
-.descripcion{
-  background-color:gainsboro;
-  display:block;
-  /* margin: 0% 25% 0% 25%; */
+.descripcion {
+  display: block;
+  background-color: gainsboro;
   text-align: center;
-  border-radius:0 0 0.5em 0.5em ;
+  border-radius: 0 0 0.5em 0.5em;
 }
 
-.precio{
-  display:block;
+.precio {
+  display: block;
   color: #25c16a;
 }
-p{
-  display: flex;  
+
+p {
+  display: flex;
 }
 
-.btnCarrito{
-  /* display: none; */
-  visibility: hidden;
- width:101%;
-  border-radius:0 0 0.5em 0.5em ;
-  background-color: #25c16a;
+.desple {
+  display: none;
+}
+
+.product .desple .btnCarrito {
+  width: 101%;
+  border-radius: 0 0 0.5em 0.5em;
   height: 3em;
-  /* top:50%;
-  left:50%; */
-  /* transform: translate(-50%, -50%); */
+  
 }
-.btnCarrito ::before{
-  position: absolute;
-  transform: translate(-50%, -50%);
- transition: all .5s ease-in-out;
+
+.product :hover .desple{
+  display: block;
 }
-.btnCarrito:hover::before{
-  content: 'Añadir a Carrito';
-  top: -30px;
+
+.styles-module_carousel-arrow__26sRw{
+  background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) no-repeat 50%;
+  z-index: 1;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  height: 2em;
+  
+
+}
+
+.exampleCarousel1 button:first-child {
+  transform: rotate(180deg);
+  left: -16px;
+}
+.styles-module_carousel-arrow__26sRw button{
   background-color: #25c16a;
 }
+

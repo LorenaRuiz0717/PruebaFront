@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "../assest/logo.png";
+import lupa from "../assest/lupa.png";
+import perfil from '../assest/perfil.png'
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap-icons';
 // import 'bootstrap/dist/css/bootstrap.css';'
@@ -10,32 +13,35 @@ function Header() {
   return (
     <div className="contenedorNav">
       <img src={logo} alt="logo" width="200"></img>
-      <nav className="navbar navbar-light">
-        <div className="container-fluid">
-          <form className="d-flex">
-            <div className="buscador">
+      {/* <nav className='nav'> */}
+          {/* <form 
+          // className="d-flex"
+          > */}
+            <div className="contentbuscador">
               <input
-                className="form-control me-2"
+              className='buscador'
+               
+              //  className="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder='Busca marcas y productos...  '
                 aria-label="Search"
               />
               <button
-                 className="btn btn-outline-success"
-                type="submit"
-              >
-                Search
+              className='btnBuscador'
+              //  className="btn btn-outline-success"
+                type="submit">
+                  {/* <img className='lupa' src={lupa} alt='imgperfil'></img> */}
+              <i class="fa fa-search" aria-hidden="true"></i>
               </button>
             </div>
-          </form>
-          <i className="bi bi-cart3"></i> 
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-          <div className="datos">
-            <h3>Lorena</h3>
-            <h4>pefil</h4>
+          {/* </form> */}
+           <div className="datos">
+           <h3>Lorena</h3>
+
+            <img className='imgPerfil' src={perfil} alt='imgperfil'></img>
+          
           </div>
-        </div>
-      </nav>
+     
     </div>
   );
 }

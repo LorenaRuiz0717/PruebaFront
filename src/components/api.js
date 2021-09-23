@@ -1,16 +1,10 @@
 import '../App.css'
-/* eslint-disable jsx-a11y/alt-text */
 import Producto from './Producto'
 import Car from './car'
-
-// import { Item } from './yourItem';
-// import { Fragment } from "react"
+import Header from './Header'
 import { Carousel } from '@trendyol-js/react-carousel'
 
-
 const { useEffect, useState } = require("react")
-
-
 
 function API() {
     const url = ' https://superfuds-assets.s3-sa-east-1.amazonaws.com/utils/product.json'
@@ -29,42 +23,35 @@ function API() {
         // })      
     }
 
-
     useEffect((url) => {
         fetchApi(url)
     }, [])
 
-
     return (
         <>
-      
-    {/* <div className='contenCarousel'> */}
-        {/* <Carousel> */}
-        {/* // slide='6'> */}
-        {productos.map((producto) =>
-       
-                <Producto
-                    key={producto.id}
-                    producto={producto}
+            <Header />
+            <div>
+                <Car
                     car={car}
-                    setCar={setCar}
-                    productos={productos}>
-                </Producto>
-      
-            )}
-             {/* </Carousel> */}
-      <Car  
-         car={car}
-         setCar={setCar}/>
-            
-        {/* </div> */}
-      
-        
-     
-         </>
-    
+                    setCar={setCar} />
+            </div>
+            {/* <div className='contenCarousel'> */}
+                {/* <Carousel> */}
+                {/* // slide='6'> */}
+                {productos.map((producto) =>
+                    <Producto
+                        key={producto.id}
+                        producto={producto}
+                        car={car}
+                        setCar={setCar}
+                        productos={productos}
+                        >                            
+                    </Producto>
+                )}
+                {/* </Carousel>  */}
+            {/* </div> */}
+       </>
     )
-
 }
 export default API
 

@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import '../App.css'
 import React from "react";
-
-// import addShop from './car'
+import logo from '../assest/logo.png'
 // import { Carousel } from '@trendyol-js/react-carousel'
 
 
@@ -15,22 +14,36 @@ const Producto = ({producto, car, setCar, productos }) => {
    setCar([...car, ...producto])
     }
 
+    const deleteProduct=(id)=>{
+        const productos=car.filter(producto=> producto.id !==id)
+        setCar(productos)
+
+    }
+
     return (
         <>        
-        {/* <ul className='contenProduct'> */}
+        <ul className='contenProduct'>
             <li className='product'>
             <h2 className='title'>{title} </h2>
-            <img src={image} className='imgProduct' height='200em' width='auto'></img>
-            <div className='descripcion'>
-        {/* <img src={logo} alt="logo" width="90"></img> */}
-            <h3>{category}</h3><h3>{net_content}</h3>
-            <h3 className='precio'>$</h3><h5> {price_real}</h5> 
+            <img src={image} className='imgProduct'  height='180em' width='auto'></img>
+            <div className='descripcion'>                                        
+        <img src={logo} alt="logo" className='logoProducts' width="80"></img>
+          <h3>{category}</h3>
+          <h3 className='items'>Contenido Neto: </h3>  <h3>{net_content}</h3>
+            <h3 className='items'>Precio: </h3><h3>$ {price_real}</h3> 
             <div className='desple'>
-            <button type ="submit" className ="btnCarrito" onClick={()=>addProduct(id)}>Añadir a carrito</button>
+                {productos ?(
+                      (<button type ="submit" className ="btnCarrito" onClick={()=>addProduct(id)}>Añadir a carrito</button>
+                      )):(
+                          <div>
+                                <button type ="button" className ="btnCarrito" onClick={()=>deleteProduct(id)}>Eliminar </button>
+                        </div>
+                      )
+                }
             </div>
             </div>
             </li>
-            {/* </ul>   */}
+            </ul>  
         </>
                  )
 }

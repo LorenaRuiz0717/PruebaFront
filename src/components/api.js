@@ -1,9 +1,10 @@
 import '../App.css'
-import addShop from './addShop'
 /* eslint-disable jsx-a11y/alt-text */
+import Producto from './Producto'
+import Car from './car'
 
 // import { Item } from './yourItem';
-import { Fragment } from "react"
+// import { Fragment } from "react"
 import { Carousel } from '@trendyol-js/react-carousel'
 
 
@@ -13,8 +14,8 @@ const { useEffect, useState } = require("react")
 
 function API() {
     const url = ' https://superfuds-assets.s3-sa-east-1.amazonaws.com/utils/product.json'
-    const [productos, setProductos] = useState()
-    const [car,setcar]=useState([])
+    const [productos, setProductos] = useState([])
+    const [car, setCar] = useState([])
     const fetchApi = async () => {
         const response = await fetch(url)
         // console.log(response.status)
@@ -33,55 +34,79 @@ function API() {
         fetchApi(url)
     }, [])
 
-    const addCar=()=>{
-        eve
-    }
 
     return (
-
         <>
-            {!productos ? 'Cargando...' :
-                <div className='contenCarusel'>
-                    <Carousel>
-
-                        {productos.map((productos, index) => {
-
-                            return (
-                               <div className='contentProduct'>
-
-                                <div className='product' key={index}>
-
-                                    <h2 className='title'>{productos.title} </h2>
-
-                                    <img src={productos.image} className='imgProduct' height='200em' width='auto'></img>
-
-                                    {/* <h5>{productos.id}</h5> */}
-                                    <div className='descripcion'>
-                                        {/* <img src={logo} alt="logo" width="90"></img> */}
-                                        <h5>{productos.category}</h5><h7>{productos.net_content}</h7>
-                                        <p> <h3 className='precio'>$</h3><h5> {productos.price_real}</h5> </p>
-                                        {/* <button type="button" class="btn btn-success"  onClick={addShop}>Success</button> */}
-
-
-                                        <div className='desple'>
-                                            <button type="button" class="btnCarrito" onClick={addShop}>Añadir a carrito</button>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            )
-
-                        })}
-
-                    </Carousel>
-                </div>
-
-            }
-            </>
-            )
+      
+    {/* <div className='contenCarousel'> */}
+        {/* <Carousel> */}
+        {/* // slide='6'> */}
+        {productos.map((producto) =>
+       
+                <Producto
+                    key={producto.id}
+                    producto={producto}
+                    car={car}
+                    setCar={setCar}
+                    productos={productos}>
+                </Producto>
+      
+            )}
+             {/* </Carousel> */}
+      <Car  
+         car={car}
+         setCar={setCar}/>
+            
+        {/* </div> */}
+      
+        
+     
+         </>
+    
+    )
 
 }
-            export default API
+export default API
+
+            // <>
+            // {!productos ? 'Cargando...' :
+            //     <div className='contenCarusel'>
+            //         <Carousel>
+
+            //             {productos.map((productos, index) => {
+
+            //                 return (
+            //                    <div className='contentProduct'>
+
+            //                     <div className='product' key={index}>
+
+            //                         <h2 className='title'>{productos.title} </h2>
+
+            //                         <img src={productos.image} className='imgProduct' height='200em' width='auto'></img>
+
+            //                         {/* <h5>{productos.id}</h5> */}
+            //                         <div className='descripcion'>
+            //                             {/* <img src={logo} alt="logo" width="90"></img> */}
+            //                             <h5>{productos.category}</h5><h7>{productos.net_content}</h7>
+            //                             <p> <h3 className='precio'>$</h3><h5> {productos.price_real}</h5> </p>
+            //                             {/* <button type="button" class="btn btn-success"  onClick={addShop}>Success</button> */}
+
+
+            //                             <div className='desple'>
+            //                                 <button type="button" class="btnCarrito" onClick={addShop}>Añadir a carrito</button>
+            //                             </div>
+
+
+            //                         </div>
+            //                     </div>
+            //                 </div>
+
+            //                 )
+
+            //             })}
+
+            //         </Carousel>
+            //     </div>
+
+            // }
+            // </>

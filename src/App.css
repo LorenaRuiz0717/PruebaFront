@@ -163,11 +163,10 @@ p {
   border-radius: 100%;
 }
 .lupa{
-  height: 3em;
-  width: auto;
-  border-radius: 100%;
+  top:25px;
+  position:absolute;
+  height:2em;
+  width: 2em;
+  line-height: 2em;
+  margin-left: -30px;
 }
-.btnBuscador{
-  border-radius: 100%;
-}
-

@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/PruebaFront/static/css/main.397c76d8.chunk.css",
-    "main.js": "/PruebaFront/static/js/main.1d536afe.chunk.js",
-    "main.js.map": "/PruebaFront/static/js/main.1d536afe.chunk.js.map",
-    "runtime-main.js": "/PruebaFront/static/js/runtime-main.12a3b385.js",
-    "runtime-main.js.map": "/PruebaFront/static/js/runtime-main.12a3b385.js.map",
-    "static/js/2.7beee489.chunk.js": "/PruebaFront/static/js/2.7beee489.chunk.js",
-    "static/js/2.7beee489.chunk.js.map": "/PruebaFront/static/js/2.7beee489.chunk.js.map",
-    "static/js/3.82568708.chunk.js": "/PruebaFront/static/js/3.82568708.chunk.js",
-    "static/js/3.82568708.chunk.js.map": "/PruebaFront/static/js/3.82568708.chunk.js.map",
+    "main.css": "/PruebaFront/static/css/main.316e917c.chunk.css",
+    "main.js": "/PruebaFront/static/js/main.75e28208.chunk.js",
+    "main.js.map": "/PruebaFront/static/js/main.75e28208.chunk.js.map",
+    "runtime-main.js": "/PruebaFront/static/js/runtime-main.0452dde3.js",
+    "runtime-main.js.map": "/PruebaFront/static/js/runtime-main.0452dde3.js.map",
+    "static/js/2.e2382e57.chunk.js": "/PruebaFront/static/js/2.e2382e57.chunk.js",
+    "static/js/2.e2382e57.chunk.js.map": "/PruebaFront/static/js/2.e2382e57.chunk.js.map",
+    "static/js/3.a800d9cc.chunk.js": "/PruebaFront/static/js/3.a800d9cc.chunk.js",
+    "static/js/3.a800d9cc.chunk.js.map": "/PruebaFront/static/js/3.a800d9cc.chunk.js.map",
     "index.html": "/PruebaFront/index.html",
-    "static/css/main.397c76d8.chunk.css.map": "/PruebaFront/static/css/main.397c76d8.chunk.css.map",
-    "static/js/2.7beee489.chunk.js.LICENSE.txt": "/PruebaFront/static/js/2.7beee489.chunk.js.LICENSE.txt",
+    "static/css/main.316e917c.chunk.css.map": "/PruebaFront/static/css/main.316e917c.chunk.css.map",
+    "static/js/2.e2382e57.chunk.js.LICENSE.txt": "/PruebaFront/static/js/2.e2382e57.chunk.js.LICENSE.txt",
     "static/media/logo.9c13f3bd.png": "/PruebaFront/static/media/logo.9c13f3bd.png",
     "static/media/perfil.7a718255.png": "/PruebaFront/static/media/perfil.7a718255.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.12a3b385.js",
-    "static/js/2.7beee489.chunk.js",
-    "static/css/main.397c76d8.chunk.css",
-    "static/js/main.1d536afe.chunk.js"
+    "static/js/runtime-main.0452dde3.js",
+    "static/js/2.e2382e57.chunk.js",
+    "static/css/main.316e917c.chunk.css",
+    "static/js/main.75e28208.chunk.js"
   ]
 }
